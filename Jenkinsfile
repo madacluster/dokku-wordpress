@@ -1,7 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'ubuntu'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh '''export WORDPRESS_VERSION=3.7.16
 
